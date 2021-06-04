@@ -1,0 +1,65 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+  <input type="hidden" name="UserId" [value]="service.formData.UserId" />
+  <div class="form-group">
+      <label>Nome do Usuario</label>
+      <input class="form-control form-control-lg" placeholder="Coloque o nome aqui" name="NomeCompleto"
+          #NomeCompleto="ngModel" [(ngModel)]="service.formData.NomeCompleto"
+          required [class.invalid]="NomeCompleto.invalid &#038;&#038; NomeCompleto.touched">
+  </div>
+  <div class="form-group">
+      <label>CPF</label>
+      <input class="form-control form-control-lg" placeholder="Insira o CPF aqui" name="CPF"
+          #CPF="ngModel" [(ngModel)]="service.formData.CPF"
+          required maxlength="11" minlength="11" [class.invalid]="CPF.invalid &#038;&#038; CPF.touched">
+  </div>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+          <label>Telefone</label>
+          <input type="password" class="form-control form-control-lg" placeholder="Coloque o numero de telefone aqui" name="TelefoneUser"
+              #TelefoneUser="ngModel" [(ngModel)]="service.formData.TelefoneUser"
+              required maxlength="12" minlength="12" [class.invalid]="TelefoneUser.invalid &#038;&#038; TelefoneUser.touched">
+      </div>
+      <div class="form-group col-md-6">
+          <label> E-Mail </label>
+          <input class="form-control form-control-lg" placeholder="insira@nome.com" name="E-Mail"
+              #Email="ngModel" [(ngModel)]="service.formData.Email"
+              required maxlength="3000" minlength="1" [class.invalid]="Email.invalid &#038;&#038; Email.touched">
+      </div>
+      <div class="form-group col-md-6">
+        <label> Senha </label>
+        <input class="form-control form-control-lg" placeholder="Coloque sua senha aqui" name="Senha"
+            #Senha="ngModel" [(ngModel)]="service.formData.Senha"
+            required maxlength="100" minlength="0" [class.invalid]="Senha.invalid &#038;&#038; Senha.touched">
+    </div>
+
+
+    </div>
+  <div class="form-group">
+      <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+*src
+   *app
+   usuario
+    usuario.component.ts/html/.css
+   usario-form
+    usario-form.component.ts/html/.css
+    empresa
+    empresa.component.ts/html/.css s
+    empresa-form.component.ts/html/.css
+
++---* shared
+      usario.service.ts
+      usario.model.ts
+      empresa.service.ts
+      empresa.model.ts
